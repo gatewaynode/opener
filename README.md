@@ -30,5 +30,5 @@ ln -s $HOME/opener/opener.bash $HOME/.local/bin/opener
 Then you can add this alias to make `fzf` much more useful in file system discovery..
 
 ```bash
-alias fz="find . -maxdepth 1 | sed 's/^\.\///g' | fzf --preview './opener.bash {}'"
+alias fz="find . -maxdepth 1 | sed 's/^\.\///g' | fzf --preview 'opener {}'"
 ```
