@@ -7,7 +7,7 @@ Instead of showing the usual directory error or binary file warning with the fan
 
 This uses the programs: `bat`, for text file viewing; `tree`, for graphical dir listings; `hexyl`, for binary file viewing.
 
-On Debian systems you can install them like so:
+On Ubuntu based systems you can install them like so:
 
 ```bash
 sudo apt update; sudo apt install -y bat tree hexyl
