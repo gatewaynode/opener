@@ -5,7 +5,7 @@ if [ -d "$1" ]; then
 else
 	BAT_TEST=$(file --mime "$1")
 	if [[ $BAT_TEST == *binary ]] ; then
-		hexyl "$1"
+		hexyl -n 4kB "$1"
 	else
 		bat --color=always --style=numbers --line-range=:500 "$1"
 	fi
