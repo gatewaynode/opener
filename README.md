@@ -3,7 +3,7 @@ A simple bash script designed for use with `fzf` preview but maybe useful in oth
 
 Instead of showing the usual directory error or binary file warning with the fancy `bat` preview in `fzf` this script conditionally checks the selected file and previews a tree, a highlighted text, or a hex viewer.
 
-##Prerequisites
+## Prerequisites
 
 This uses the programs: `bat`, for text file viewing; `tree`, for graphical dir listings; `hexyl`, for binary file viewing.
 
