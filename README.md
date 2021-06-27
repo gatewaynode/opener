@@ -19,7 +19,7 @@ Similarly, I use this with `fzf` (fuzzy finder), which you will need to follow t
 sudo apt update; sudo apt install -y fzf
 ```
 
-### Prequisite Troubleshooting
+### Prerequisite Troubleshooting
 
 I noticed `hexyl` is sometimes problematic to install from apt, here is a workaround to install from source.
 
