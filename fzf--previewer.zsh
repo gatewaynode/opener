@@ -63,7 +63,8 @@ else
                 echo "$FILE_MIME" 
                 hexyl -n 4kB "$FILE_PATH" && exit 0
             else
-                batcat --style=numbers --color=always --line-range :222 $1
+                cat --style=numbers --color=always --line-range :222 $1 && exit 0
+                batcat --style=numbers --color=always --line-range :222 $1 && exit 0
             fi
             exit 1;;
     esac
