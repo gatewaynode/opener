@@ -1,9 +1,18 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 FILE_PATH=$1
 
+bat=`/usr/bin/which bat || echo batcat`
+
 if [ -d "$1" ]; then
 	tree --du -C -L 2 "$FILE_PATH"
+elif ! [ -f "$1" ]; then
+    echo $1 | read -A tokens
+    for token in $tokens; do
+        if [ -f $token ]; then
+            $bat --style=numbers --color=always --line-range :222 $token
+        fi
+    done
 else
 	FILE_MIME=$(file --mime "$FILE_PATH")
     filename=$(basename -- "$FILE_PATH")
@@ -63,8 +72,7 @@ else
                 echo "$FILE_MIME" 
                 hexyl -n 4kB "$FILE_PATH" && exit 0
             else
-                cat --style=numbers --color=always --line-range :222 $1 && exit 0
-                batcat --style=numbers --color=always --line-range :222 $1 && exit 0
+                $bat --style=numbers --color=always --line-range :222 $1 && exit 0
             fi
             exit 1;;
     esac
